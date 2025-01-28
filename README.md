@@ -1,2 +1,2 @@
 # Hospital-Management
-minor project
+minor project - MCA
