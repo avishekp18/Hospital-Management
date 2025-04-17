@@ -1,0 +1,118 @@
+/* src/components/FeatureCard.css */
+.feature-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  width: 300px;
+  background: linear-gradient(145deg, #ff758c, #ff7eb3);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px) scale(1.03) rotate(1deg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Image Styling */
+.feature-card-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  position: relative;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(75%);
+  transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.feature-card:hover .card-image {
+  transform: scale(1.1);
+  filter: brightness(60%);
+}
+
+/* Card Content */
+.feature-card-content {
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.feature-card-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #ffecb3;
+  transition: color 0.3s ease;
+}
+
+.feature-card-description {
+  font-size: 1rem;
+  color: #e1e1e1;
+  margin-bottom: 20px;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.feature-card:hover .feature-card-title {
+  color: #fff;
+}
+
+.feature-card:hover .feature-card-description {
+  opacity: 1;
+}
+
+/* Button Styling */
+.feature-card-btn {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 30px;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.feature-card-btn:hover {
+  background-color: #ff9a9e;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 154, 158, 0.5);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .feature-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-card {
+    width: 100%;
+    max-width: 300px;
+  }
+}

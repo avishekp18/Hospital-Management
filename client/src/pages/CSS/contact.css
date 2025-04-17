@@ -1,0 +1,79 @@
+/* General Styles */
+body {
+  background-color: #f8f9fa;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Contact Form Card */
+.contact-card {
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-card:hover {
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Title */
+h2 {
+  font-weight: 600;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+/* Form Labels */
+.form-label {
+  font-weight: 500;
+  color: #333;
+}
+
+/* Form Inputs */
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  transition: all 0.3s;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Textarea */
+textarea.form-control {
+  resize: none;
+}
+
+/* Submit Button */
+.btn-primary {
+  background: linear-gradient(to right, #007bff, #0056b3);
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to right, #0056b3, #004085);
+}
+
+/* Alerts */
+.alert {
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+  .contact-card {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,146 @@
+/* src/pages/HomePage.css */
+.home-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 3rem;
+  color: #2c3e50;
+  font-weight: bold;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.page-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.feature-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Individual feature card styling */
+.feature-col {
+  flex: 1 1 300px;
+  max-width: 350px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Card hover effect */
+.feature-card {
+  background: linear-gradient(145deg, #ff9a9e, #fad0c4);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styling */
+.feature-card-btn {
+  background-color: #333;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 30px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.feature-card-btn:hover {
+  background-color: #ff9a9e;
+  transform: translateY(-3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  .page-subtitle {
+    font-size: 1rem;
+  }
+
+  .feature-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-col {
+    flex: 1 1 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .page-subtitle {
+    font-size: 0.9rem;
+  }
+}
+.floating-chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #007bff;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+.floating-chat-button:hover {
+  transform: scale(1.1);
+}
+
+.chat-box {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 320px;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.chat-messages {
+  overflow-y: auto;
+  flex-grow: 1;
+  max-height: 250px;
+}
+
+.chat-input {
+  display: flex;
+  gap: 5px;
+}
+

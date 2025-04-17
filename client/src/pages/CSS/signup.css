@@ -1,0 +1,160 @@
+/* Global Variables for easy customization */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #28a745;
+  --error-color: #e74c3c;
+  --background-color: #f8f9fa;
+  --input-background: #f1f3f5;
+  --input-focus-border: var(--primary-color);
+  --card-background: #ffffff;
+  --text-color-dark: #343a40;
+  --text-color-light: #495057;
+  --input-border-color: #ced4da;
+  --card-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  --input-padding: 14px 16px;
+  --btn-padding: 16px;
+}
+
+/* Main Container */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  height: 100vh;
+  background-color: var(--background-color);
+}
+
+/* Card */
+.signup-card {
+  background-color: var(--card-background);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Title */
+.signup-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--text-color-dark);
+  text-align: center;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+/* Form */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Even spacing between input fields */
+}
+
+/* Input Fields */
+.input-field {
+  padding: var(--input-padding);
+  border: 2px solid var(--input-border-color);
+  border-radius: 8px;
+  font-size: 16px;
+  color: var(--text-color-light);
+  outline: none;
+  background-color: var(--input-background);
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: var(--input-focus-border);
+  background-color: #fff;
+}
+
+/* Label */
+label {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color-light);
+  margin-bottom: 8px;
+}
+
+/* Error and Success Messages */
+.alert {
+  margin-bottom: 20px;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: var(--btn-padding);
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:disabled {
+  background-color: #ced4da;
+  cursor: not-allowed;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: #0056b3;
+  transform: translateY(-3px); /* Subtle lift effect */
+}
+
+/* Footer */
+.signup-footer {
+  text-align: center;
+  color: #666;
+  margin-top: 30px;
+}
+
+.signup-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries for better responsiveness */
+@media (max-width: 576px) {
+  .signup-container {
+    padding: 20px;
+  }
+
+  .signup-card {
+    padding: 30px;
+  }
+
+  .signup-title {
+    font-size: 24px;
+  }
+
+  .input-field {
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .signup-footer {
+    font-size: 14px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
